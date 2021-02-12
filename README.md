@@ -24,4 +24,5 @@ Further improvements to be done and were not done due to time shortage
 * part of url can be stored in config
 * make use of PropTypes 
 * get rid of setTimeout in useEffect this is only to show the loading indicators works fine.  
-
+* Images could be aligned properly and with correct sizes
+* Scroll down to see the CoinDetails can be improved
