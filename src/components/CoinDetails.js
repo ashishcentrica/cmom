@@ -61,7 +61,7 @@ export const CoinDetails = ({ coinId }) => {
                 <td>{coin?.name}</td>
                 <td>{coin?.symbol}</td>
                 <td>{coin?.hashing_algorithm}</td>
-                <td>{coin?.description?.en}</td>
+                <td className={'desc'}>{coin?.description?.en}</td>
                 <td>{coin?.market_data?.market_cap?.eur}</td>
                 <td>{coin?.links?.homepage}</td>
                 <td>{coin?.genesis_date}</td>

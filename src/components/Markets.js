@@ -41,10 +41,10 @@ export function Markets () {
     }
     
     return (
-        <>
+        <div  className={'container'}>
             <h1>Markets</h1>
             <div>
-                <Table striped bordered hover>
+                <Table striped bordered hover responsive='sm' size='sm'>
                     <thead>
                     <tr>
                         <th>Image</th>
@@ -70,7 +70,7 @@ export function Markets () {
             <div>
                 {coinId && <CoinDetails coinId={coinId} /> }
             </div>
-        </>
+        </div>
     )
 }
 

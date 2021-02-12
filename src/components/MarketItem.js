@@ -1,13 +1,11 @@
 import React from 'react'
-import { Image, Col } from 'react-bootstrap'
+import { Image } from 'react-bootstrap'
 
 export function MarketItem ({ market, onClick }) {
     const { id , image, name, symbol, current_price, high_24h, low_24h}  = market
     return <tr id={id} onClick={onClick}>
-        <td>
-            <Col xs={5} md={2}>
+        <td className={'imageRow'}>
                 <Image src={image} fluid/>
-            </Col>
         </td>
         <td>{name}</td>
         <td>{symbol}</td>
