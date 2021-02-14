@@ -3,6 +3,7 @@ import { Table } from 'react-bootstrap'
 import axios from 'axios'
 import { Error } from './Error'
 import { LoadingIndicator } from './LoadingIndicator'
+import DOMPurify from 'dompurify';
 
 
 export const CoinDetails = ({ coinId }) => {
@@ -61,7 +62,7 @@ export const CoinDetails = ({ coinId }) => {
                 <td>{coin?.name}</td>
                 <td>{coin?.symbol}</td>
                 <td>{coin?.hashing_algorithm}</td>
-                <td className={'desc'}><div dangerouslySetInnerHTML={{ __html: coin?.description?.en}} />
+                <td className={'desc'}><div dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(coin?.description?.en)}} />
                 </td>
                 <td>{coin?.market_data?.market_cap?.eur}</td>
                 <td>{coin?.links?.homepage}</td>
