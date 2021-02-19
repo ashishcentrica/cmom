@@ -1,8 +1,8 @@
 import { render, screen } from '@testing-library/react';
-import { Markets } from './Markets'
+import { MarketsContainer } from 'src/components/MarketsContainer'
 
 test('renders loading indicator', () => {
-    render(<Markets />);
+    render(<MarketsContainer />);
     const linkElement = screen.getByText(/Loading, Please wait ../i);
     expect(linkElement).toBeInTheDocument();
 });
